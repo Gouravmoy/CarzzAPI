@@ -1,0 +1,16 @@
+var mongoose = require('mongoose');
+var carsSchema = require('../models/cars')
+
+module.exports = {
+
+    getAllCars: function (callback) {
+        carsSchema.find(function (error, cars) {
+            if (error) {
+                console.log(error);
+                callback(error, null);
+            }
+            callback(null, cars);
+        });
+    }
+
+}
