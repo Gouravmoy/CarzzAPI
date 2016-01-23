@@ -1,0 +1,241 @@
+{
+	"_comment": "Beacons Collection",
+	"_id": "1",
+	"beacon_nameSpace": "EDD1EBEAC04E5DEFA017",
+	"beacon_instance": "0BDB87539B67",
+	"location": "exterior",//When the Customer Enters the Showroom
+	"link_id": "showroom_id"
+},
+{
+	"_id": "2",
+	"beacon_nameSpace": "EDD1EBEAC04E5DEFA017",
+	"beacon_instance": "0BDB87539B68",
+	"location": "interior",
+	"link_id": "prius"
+},
+{
+	"_comment": "ShowRooms Collection",
+	"_id": "showroom_id",
+	"name": "Bjs Toyota",
+	"phone_no": ["+91 8394 294 400",
+	"91 8394 294 401",
+	"+91 8394 294 402"],
+	"address": {
+		"street": "Global Village Backgate",
+		"city": "Bangalore",
+		"dist": "Bangalore",
+		"pin": 560059,
+		"state": "Karnataka"
+	},
+	"car_inventory": {
+		"catagory": [{
+			"name": "sedan",
+			"car_list": ["prius",
+			"car_id_2",
+			"car_id_3",
+			"car_id_4"]
+		},
+		{
+			"name": "hatchBack",
+			"car_list": ["car_id_5",
+			"car_id_6",
+			"car_id_7",
+			"car_id_8"]
+		}]
+	}
+},
+{
+	"_comment": "Cars Collection",
+	"_id": "prius",
+	"car_name": "2016 PRIUS",
+	"small_description": "Let's shatter all expectations.",
+	"price": 50,
+	"available": true,
+	"gallery_images": [{
+		"thumbnail": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg",
+		"profile": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg"
+	},
+	{
+		"thumbnail": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg",
+		"profile": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg"
+	}],
+	"colors_variations": [{
+		"color_name": "HYPERSONIC RED",
+		"color_hex_code": "#940D0E",
+		"image_url": {
+			"thumbnail": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg",
+			"profile": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg"
+		}
+	},
+	{
+		"color_name": "BLIZZARD PEARL",
+		"color_hex_code": "#F3F2F2",
+		"image_url": {
+			"thumbnail": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg",
+			"profile": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg"
+		}
+	}],
+	"models_id": ["two",
+	"two echo",
+	"three",
+	"three touring"],
+	"features": "prius_features"
+},
+{
+	"_comment": "Models Collection",
+	"_id": "three touring",
+	"image_url": {
+		"thumbnail": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg",
+		"profile": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg"
+	},
+	"cost": 50,
+	"specs": "prius_spec"
+},
+{
+	"_comment": "Specs Collection",
+	"spec_id": "prius_spec",
+	"car_id": "prius",
+	"specs": {
+		"catagory": [{
+			"name": "Exterior",
+			"spec_details": [{
+				"description": "Bi-LED projector low- and high-beam headlights with auto on/off feature",
+				"model_status": [{
+					"model_id": "two",
+					"avalability": false,
+					"extra_info": "Not available"
+				},
+				{
+					"model_id": "two echo",
+					"avalability": true,
+					"extra_info": "Standard"
+				},
+				{
+					"model_id": "three",
+					"avalability": false,
+					"extra_info": "Not available"
+				},
+				{
+					"model_id": "three touring",
+					"avalability": true,
+					"extra_info": "Standard"
+				}]
+			},
+			{
+				"description": "LED Daytime Running Lights (DRL) with on/off feature",
+				"model_status": [{
+					"model_id": "two",
+					"avalability": true,
+					"extra_info": "Standard"
+				},
+				{
+					"model_id": "two echo",
+					"avalability": true,
+					"extra_info": "Standard"
+				},
+				{
+					"model_id": "three",
+					"avalability": false,
+					"extra_info": "Not available"
+				},
+				{
+					"model_id": "three touring",
+					"avalability": true,
+					"extra_info": "Standard"
+				}]
+			}]
+		},
+		{
+			"name": "Interior",
+			"spec_details": [{
+				"description": "Smart-flow climate control system with pollen filtration",
+				"model_status": [{
+					"model_id": "two",
+					"avalability": true,
+					"extra_info": "Standard"
+				},
+				{
+					"model_id": "two echo",
+					"avalability": true,
+					"extra_info": "Standard"
+				},
+				{
+					"model_id": "three",
+					"avalability": false,
+					"extra_info": "Not available"
+				},
+				{
+					"model_id": "three touring",
+					"avalability": true,
+					"extra_info": "Standard"
+				}]
+			},
+			{
+				"description": "Integrated backup camera",
+				"model_status": [{
+					"model_id": "two",
+					"avalability": true,
+					"extra_info": "Standard"
+				},
+				{
+					"model_id": "two echo",
+					"avalability": true,
+					"extra_info": "Standard"
+				},
+				{
+					"model_id": "three",
+					"avalability": false,
+					"extra_info": "Not available"
+				},
+				{
+					"model_id": "three touring",
+					"avalability": true,
+					"extra_info": "Standard"
+				}]
+			}]
+		}]
+	}
+},
+{
+	"_comment": "Features Collection",
+	"_id": "prius_features",
+	"car_id": "prius",
+	"catagory": [{
+		"name": "Exterior",
+		"features": [{
+			"title": "A dramatic new look",
+			"synopsis": "Get ready to take everyone by surprise. The 2016 Prius is here with a striking new look that will shake up the status quo. Its sleek shape has been engineered to cheat the wind and win over the crowd. Stylish front and rear LED lighting helps this hybrid make a powerful statement. And available 17-in. alloy wheels ensure that this hybrid rolls in style every time it hits the streets.",
+			"image_url": {
+				"thumbnail": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg",
+				"profile": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg"
+			}
+		},
+		{
+			"title": "LED lighting",
+			"synopsis": "Let’s make an unforgettable first impression. Prius features Bi-LED elements in the headlights, available integrated fog lights and accent lights, making front-end lighting that is as dramatic as it is efficient. It’s one unexpected new look, and it’s ready to help you light up the night.",
+			"image_url": {
+				"thumbnail": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg",
+				"profile": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg"
+			}
+		}]
+	},
+	{
+		"name": "Interior",
+		"features": [{
+			"title": "Futuristic interior",
+			"synopsis": "Get more of what you want, inside and out. All-new seats give everyone room to stretch out. And up front, the center console has been reshaped to keep things feeling spacious. Advanced tech like an available 7-in. touch-screen display, 4.2-in. color dual Multi-Information Display (MID) with customizable screens and available Qi-compatible wireless smartphone charging 34 help keep you in command of it all.",
+			"image_url": {
+				"thumbnail": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg",
+				"profile": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg"
+			}
+		},
+		{
+			"title": "Improved ride comfort",
+			"synopsis": "This is one smooth operator. A new suspension is tuned for just the right balance of comfort and driving fun. Prius also uses advanced sound-deadening techniques to help keep those unwanted outside noises outside. Now every drive can be a relaxing one.",
+			"image_url": {
+				"thumbnail": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg",
+				"profile": "http://resizing.flixster.com/6xF9PyshnlqT6g4OU9xVQFLnr9g=/54x80/dkpu1ddg7pbsk.cloudfront.net/movie/11/20/33/11203306_ori.jpg"
+			}
+		}]
+	}]
+}
