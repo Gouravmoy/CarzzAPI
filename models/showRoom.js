@@ -19,7 +19,7 @@ var showRoomSchema = new Schema({
         car_inventory: {
             catagory: [{
                 name: String,
-                car_list: [String]
+                car_list: []
             }]
         }
     },{ collection: 'showroom' }

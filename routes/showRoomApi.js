@@ -5,7 +5,7 @@ var express = require('express');
 var router = express.Router();
 var showRoomDao = require('../dao/showRoomDao');
 
-router.route('/ Z:id')
+router.route('/:id')
 
     .get(function (req, res) {
         console.log("Inside Api");
@@ -14,6 +14,16 @@ router.route('/ Z:id')
                 return res.status(500).send(err);
             }
             return res.send(showroom);
+        });
+    });
+
+router.route('/inventory/:id')
+    .get(function (req, res) {
+        showRoomDao.getInventoryById(req.params.id, function (err, inventory) {
+            if (err) {
+                return res.status(500).send(err);
+            }
+            return res.send(inventory);
         });
     });
 
