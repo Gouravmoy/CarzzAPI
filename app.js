@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var api = require('./routes/api');
+var api = require('./routes/carsApi');
+var showRoom = require('./routes/showRoomApi');
 var mongoose = require('mongoose')
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/api', api);
+app.use('/showroom', showRoom);
 
 mongoose.connect("mongodb://admin:admin@ds049935.mongolab.com:49935/carzztestdb");
 console.log("Connected to Mongo Database")
