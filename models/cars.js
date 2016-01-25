@@ -22,7 +22,9 @@ var carsSchema = new Schema({
         }
     }],
     //models_id: [{type: Schema.Types.ObjectId, ref: models}],
-    models_id: [],
+    models: [{
+        id: String
+    }],
     features: {type: Schema.Types.ObjectId, ref: features}
 });
 

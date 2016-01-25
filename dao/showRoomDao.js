@@ -15,29 +15,13 @@ module.exports = {
         });
     },
     getInventoryById: function (id, callback) {
-        /*var cursor = showRoomSchema.find({"showroom_id": id}, {
-         "car_inventory": 1
-         }, function (error, inventory) {
-         if (error) {
-         console.log(error);
-         callback(error, null);
-         }
-         callback(null, inventory);
-         });
-         var doc = cursor.hasNext() ? cursor.next() : null;
-         var catagoryname;
-         if(doc!=null)
-         {
-         catagoryname = doc.car_inventory.catagory
-         for(var carId:doc.car_inventory.)
-         }*/
         showRoomSchema.aggregate([
             {$match: {"showroom_id": id}},
             {
                 $project: {
                     car_inventory: "$car_inventory",
                     "_id": 0
-                },
+                }
             },
             {$unwind: "$car_inventory.catagory"},
             {$unwind: "$car_inventory.catagory.car_list"}
@@ -58,7 +42,6 @@ module.exports = {
                             callback(error, null);
                         }
                         console.log(carId2);
-                        //singleInventory += invntCarDtls;
                         console.log(invntCarDtls)
                     });
                     console.log(carId);
@@ -66,7 +49,5 @@ module.exports = {
             }
             callback(null, inventory);
         });
-
-
     }
-}
+};
