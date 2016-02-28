@@ -50,8 +50,9 @@ router.route('/models/car/:id')
     .get(function (req, res) {
         carsDao.getModelsForCar(req.params.id, function (err, models) {
             if (err) {
-                return res.status(500).send(err);
+                return res.status(200).send(err);
             }
+            res.status(200);
             return res.send(models);
         });
     });

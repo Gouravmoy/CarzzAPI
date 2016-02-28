@@ -8,6 +8,7 @@ var Schema = mongoose.Schema;
 var modelSchema = new Schema({
     _id: Schema.Types.ObjectId,
     model_id: String,
+    model_name:String,
     image_url: [
         {
             thumbnail: String,

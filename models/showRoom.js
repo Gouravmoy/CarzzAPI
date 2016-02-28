@@ -4,7 +4,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var showRoomSchema = new Schema({
+var showRoomSchema = new Schema({/*
         _id: Schema.Types.ObjectId,
         showroom_id: String,
         name: String,
@@ -22,7 +22,7 @@ var showRoomSchema = new Schema({
                 car_list: []
             }]
         }
-    },{ collection: 'showroom' }
+    */},{ collection: 'showroom' }
 );
 
 
