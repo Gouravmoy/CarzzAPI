@@ -4,6 +4,7 @@
 var mongoose = require('mongoose');
 var carsSchema = require('../models/cars');
 var modelsSchema = require('../models/models');
+var featuresSchema = require('../models/features');
 
 module.exports = {
 
@@ -54,6 +55,30 @@ module.exports = {
             }
             callback(null, carsInfo);
         });
+    },
+    getFeaturesForCar:function(id,callback){
+        carsSchema.find({"cars_id":id},{"features":1},function(error,featureId){
+            if (error) {
+                console.log(error);
+                callback(error, null);
+            }
+            var Id = "";
+
+            for (var key in featureId) {
+                var singleFeature = featureId[key];
+                Id = singleFeature.features;
+                break;
+            }
+
+            featuresSchema.find({_id:Id},function(error,features){
+                if (error) {
+                    console.log(error);
+                    callback(error, null);
+                }
+                callback(features);
+            });
+        });
+
     },
     getModelsForCar: function (id, callback) {
         carsSchema.find({"cars_id": id}, {

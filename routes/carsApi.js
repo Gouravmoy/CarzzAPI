@@ -56,6 +56,17 @@ router.route('/models/car/:id')
             return res.send(models);
         });
     });
+router.route('/features/car/:id')
+
+    .get(function (req, res) {
+        carsDao.getFeaturesForCar(req.params.id, function (err, features) {
+            if (err) {
+                return res.status(200).send(err);
+            }
+            res.status(200);
+            return res.send(features);
+        });
+    });
 
 
 module.exports = router;
